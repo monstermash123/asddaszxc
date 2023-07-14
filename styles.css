@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+text-transform: capitalize;
+outline: none;
+border: none;
+transition: all .2s linear;
+}
+
+:root {
+--yellow: #ffc107;
+--green: green;
+--black: #130f40;
+--light-color: #666;
+--white: #fff;
+--box-shadow: 0 0.5rem 0.4rem rgba(0, 0, 0, 0.1);
+--border: 0.1rem solid rgba(0,0,0.1);
+--outline: 0.1rem solid rgba(0,0,0.1);
+}
+
+html {
+font-size: 62.5%;
+overflow-x: hidden;
+scroll-behavior: hidden;
+scroll-padding-top: 7rem;
+}
+
+body {
+background-color: #F5F5F5;
+}
+
+.header{
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+width: 100%;
+padding: 20px 5%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: #fff;
+box-shadow: var(--box-shadow);
+z-index: 1;
+}
+
+.header .logo{
+font-size: 2.5rem;
+font-weight: bolder;
+}
+
+.header .logo i{
+color: var(--green);
+}
+
+.header .navbar a{
+font-size: 1.7rem;
+margin: 0 1rem;
+color: var(--black);
+}
+
+.header .navbar a:hover{
+color: var(--green);
+}
+
+.header .nav-icons i{
+border: 0px solid;
+height: 4.5rem;
+width: 4.5rem;
+line-height: 4.5rem;
+border-radius: 0.5rem;
+color: var(--black);
+background: #eee;
+cursor: pointer;
+font-size: 3rem;
+margin-left: 0.35rem;
+text-align: center;
+}
+
+.header .nav-icons i:hover{
+background: var(--green);
+color: var(--white);
+transform: scale(1.05);
+}
+
+.header .search-form{
+border: 0px solid;
+position: absolute;
+top: -200%; 
+right: 2rem;
+width: 50rem;
+height: 5rem;
+background: #fff;
+border-radius: 0.5rem;
+overflow: hidden;
+display: flex;
+align-items: center;
+box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active{
+top: 130%;
+transition: 0.6s;
+}
+
+.header .search-form input{
+height: 100%;
+width: 100%;
+padding: 0 1.5rem;
+text-transform: none;
+background: none;
+color: var(--black);
+}
+
+.header .search-form label{
+font-size: 3rem;
+padding-right: 2rem;
+cursor: pointer;
+color: var(--black);
+}
+
+.header .search-form label:hover{
+color: var(--green);
+}
+
+/* home banner section style */
+
+section {
+padding: 60px 14% 70px;
+margin-top: 2rem;
+}
+
+.home {
+position: relative;
+justify-content: center;
+display: flex;
+align-items: center;
+margin-top: 9.3rem;
+padding-top: 17rem;
+padding-bottom: 20rem;
+height: 100%;
+width: 100%;
+background-image: url(../lknjadwdaskl/images/fruits.png);
+background-size: cover;
+background-position: center;
+}
+
+.home .home-content {
+text-align: center;
+width: 160rem;
+}
+
+.home .home-content h1 {
+color: var(--black);
+font-size: 5.5rem;
+}
+
+.home .home-content span {
+color: var(--green);
+}
+
+.home .home-content p {
+color: var(--black);
+font-size: 1.6rem;
+padding: 1rem 0;
+line-height: 2;
+margin-bottom: 20px;
+}
+
+.home-shop-btn {
+background-color: var(--green);
+color: var(--white);
+border: 2px solid var(--green);
+padding: 8px 20px;
+font-size: 30px;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.5s ease;
+}
+
+.home-shop-btn:hover {
+background-color: var(--white);
+color: var(--green);
+}
+
+/* fading in animation for the home text */
+.fade-in-home-text {
+  animation: fadeInHomeText 3s;
+}
+
+@keyframes fadeInHomeText {
+0%{
+opacity: 0;
+}
+100%{
+opacity: 1;
+}
+}
+
+
+/* fading in animation for the home shop btn */
+.fade-in-home-btn {
+animation: fadeInHomeBtn 7s;
+}
+
+@keyframes fadeInHomeBtn {
+0%{
+opacity: 0;
+}
+100%{
+opacity: 1;
+}
+}
+
+/* about us style */
+.about {
+position: relative;
+justify-content: space-around;
+display: flex;
+align-items: center;
+padding-top: 6rem;
+padding-bottom: 20rem;
+height: 100%;
+width: 100%;
+background-image: url(../lknjadwdaskl/images/about.png);
+background-size: cover;
+background-position: center;
+}
+
+.about .about-content {
+width: 160rem;
+margin-left: 80rem;
+}
+
+
+.about .about-content h1 {
+color: var(--black);
+font-size: 8.5rem;
+padding-bottom: 30px;
+}
+
+.about .about-content h2 {
+color: var(--black);
+font-size: 4rem;
+padding-bottom: 30px;
+}
+
+.about .about-content span {
+color: var(--green);
+margin-right: 2rem;
+}
+
+.about .about-content p {
+color: var(--black);
+font-size: 1.6rem;
+padding: 1rem 0;
+line-height: 2;
+margin-bottom: 20px;
+}
+
+/* features style */
+
+.features .features-container{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+gap: 2rem;
+}
+
+
+.features .features-container .features-img{
+padding: 5rem 3rem;
+background: #fff;
+outline: var(--outline);
+outline-offset: -1rem;
+text-align: center;
+box-shadow: var(--box-shadow);
+border-radius: 10px;
+margin-right: 4rem;
+}
+
+.features .features-container .features-img:hover{
+box-shadow: 1px 1px 10px 2px var(--green);
+transform: scale(1.05);
+cursor: pointer;
+}
+
+.features .features-container .features-img img{
+margin: 1rem 0;
+height: 15rem;
+}
+
+.features .features-container .features-img h3{
+color: var(--black);
+font-size: 2.5rem;
+line-height: 1.6;
+}
+
+.features .features-container .features-img p{
+color: var(--light-color);
+font-size: 2.5rem;
+line-height: 1.6;
+}
+
+
+.features-heading{
+padding: 2rem;
+text-align: center;
+padding-bottom: 3rem;
+color: var(--black);
+font-size: 7rem;
+}
+
+.features .features-heading span{
+color: var(--green);
+}
+
+
+/* footer style */
+
+.footer {
+background: #fff;
+}
+
+.footer-container{
+display: grid;
+padding: 6% 2rem 9%;
+grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+gap: 2rem;
+justify-content: center;
+text-align: center;
+width: 100%;
+margin-top: 6rem;
+}
+
+.footer .footer-container h2 {
+position: relative;
+color: var(--black);
+margin-bottom: 15px;
+font-size: 6rem;
+}
+
+.footer .footer-container p {
+position: relative;
+color: var(--black);
+font-size: 2rem;
+}
+
+.footer .footer-container .social-icons i {
+position: relative;
+color: var(--black);
+font-weight: 200;
+font-size: 5rem;
+border-radius: 5px;
+line-height: 6rem;
+height: 6rem;
+width: 6rem;
+margin-left: 0.35rem;
+text-align: center;
+background: #eee;
+margin-right: 1rem;
+}
+
+.footer .footer-container .social-icons i:hover{
+transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
